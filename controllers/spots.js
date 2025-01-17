@@ -14,6 +14,12 @@ router.get('/', async (req, res) => {
     res.redirect('/');
   }
 });
+// controllers/applications.js
+
+router.get('/new', async (req, res) => {
+  res.render('spots/new.ejs');
+});
+
 
 
   
