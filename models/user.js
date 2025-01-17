@@ -1,4 +1,8 @@
-const applicationSchema = new mongoose.Schema({
+
+const mongoose = require('mongoose');
+
+
+const SkateSpotSchema = new mongoose.Schema({
     
   });
   
