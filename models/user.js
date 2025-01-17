@@ -19,11 +19,11 @@ const SkateSpotSchema = new mongoose.Schema({
     
     location: {
         type: String,
-        required: true,
+        
     },
     name: {
       type: String,
-      required: true,
+      
     },
     easyToFind: {
         type: Boolean,

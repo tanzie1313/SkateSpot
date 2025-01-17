@@ -70,11 +70,11 @@ router.post('/sign-in', async (req, res) => {
       _id: userInDatabase._id
     };
   
-    res.redirect('/');
-  } catch (error) {
-    console.log(error);
-    res.redirect('/');
-  }
-});
-
-module.exports = router;
+      res.redirect('/');
+    } catch (error) {
+      console.log(error);
+      res.redirect('/');
+    }
+  });
+  
+  module.exports = router;
