@@ -30,11 +30,14 @@ const SkateSpotSchema = new mongoose.Schema({
         
     },
     difficulty: {   
-        type: Boolean,
+        type: String,
+        enum: ['easy', 'medium', 'hard'],
        
     },
     rating: {
-        type: Number,
+        type: String,
+        enum: ['1', '2', '3', '4', '5'],
+
         
     },
 });

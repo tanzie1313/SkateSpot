@@ -10,5 +10,29 @@
   <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Add your New SkateSpot</h1>
+    <form action="" method="">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" />
+    <label for="location">Location</label>
+    <input type="text" id="location" name="location" />
+    <label for ="easyToFing">Easy to Find</label>
+    <input type="checkbox" id="easyToFind" name="easyToFind" />
+    <label for ="difficulty">Difficulty</label>
+    <select id="difficulty" name="difficulty">
+      <option value="easy">Easy</option>
+      <option value="medium">Medium</option>
+      <option value="hard">Hard</option>
+    </select>
+    <label for ="rating">Rating</label>
+    <select id="rating" name="rating">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+    </form>
+
+
   </body>
 </html>
