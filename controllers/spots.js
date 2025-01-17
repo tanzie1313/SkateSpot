@@ -3,7 +3,7 @@ const router = express.Router();
 
 const User = require('../models/user.js');
 
-// controllers/applications.js
+
 
 router.get('/', (req, res) => {
     res.send('Hello skatespot index route!');
