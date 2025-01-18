@@ -10,7 +10,7 @@
   <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Add your New SkateSpot</h1>
-    <form action="" method="">
+    <form action="/users/<%= user._id %>/spots" method="POST">
     <label for="name">Name</label>
     <input type="text" id="name" name="name" />
     <label for="location">Location</label>
@@ -31,6 +31,9 @@
       <option value="4">4</option>
       <option value="5">5</option>
     </select>
+    <label for="notes">Notes</label>
+    <textarea id="notes" name="notes"></textarea>
+    <button type="submit">Add SkateSpot</button>
     </form>
 
 

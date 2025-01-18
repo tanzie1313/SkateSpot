@@ -15,7 +15,7 @@ const SkateSpotSchema = new mongoose.Schema({
       type: String,
       required: true,
     },
-    Skatespots: [SkateSpotSchema],
+    spots: [SkateSpotSchema],
     
     location: {
         type: String,
@@ -37,8 +37,9 @@ const SkateSpotSchema = new mongoose.Schema({
     rating: {
         type: String,
         enum: ['1', '2', '3', '4', '5'],
-
-        
+    },
+    notes: {
+        type: String,
     },
 });
   const User = mongoose.model('User', userSchema);

@@ -13,7 +13,12 @@
 <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Your Skatespots</h1>
-    <a href="/users/<%=user._id%>/spots/new"></a>
+    <a href="/users/<%=user._id%>/spots/new">Add an Skate Spot</a>
+    <ul>
+      <% spots.forEach((spots)=>{ %>
+      <li><%= spots.name %> at <%= spots.location %></li>
+      <% }) %>
+    </ul>
   </body>
   
    
