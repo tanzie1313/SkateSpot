@@ -14,6 +14,7 @@ router.get('/', async (req, res) => {
     // applications as data in the context object.
     res.render('spots/index.ejs', {
       spots: currentUser.spots,
+      user: req.session.user,
     });
   } catch (error) {
     // If any errors, log them and redirect back home
@@ -25,7 +26,11 @@ router.get('/', async (req, res) => {
 
 router.get('/new', async (req, res) => {
   res.render('spots/new.ejs');
-});router.post('/', async (req, res) => {
+});
+router.post('/', async (req, res) => {
+  // console.log("is it working")
+  // console.log(req.session)
+  // console.log(req.body)
   try {
     // Look up the user from req.session
     const currentUser = await User.findById(req.session.user._id);
@@ -35,7 +40,7 @@ router.get('/new', async (req, res) => {
     // Save changes to the user
     await currentUser.save();
     // Redirect back to the applications index view
-    res.redirect(`/users/${currentUser._id}/spots`);
+     res.redirect(`/users/${currentUser._id}/spots`);
   } catch (error) {
     // If any errors, log them and redirect back home
     console.log(error);
@@ -46,6 +51,7 @@ router.get('/new', async (req, res) => {
 
 
   
+
 // we will build out our router logic here
 
 module.exports = router;

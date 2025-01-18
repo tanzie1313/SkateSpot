@@ -18,7 +18,7 @@ const isSignedIn = require('./middleware/is-signed-in.js');
 const passUserToView = require('./middleware/pass-user-to-view.js');
 
 
-const port = process.env.PORT ? process.env.PORT : '3008';
+const port = process.env.PORT ? process.env.PORT : 3008;
 
 mongoose.connect(process.env.MONGODB_URI);
 
@@ -46,7 +46,7 @@ app.use(passUserToView);
 app.get('/', (req, res) => {
     // Check if the user is signed in
     if (req.session.user) {
-        // Redirect signed-in users to their applications index
+        // Redirect signed-in users to their spots index
         res.redirect(`/users/${req.session.user._id}/spots`);
     } else {
         // Show the homepage for users who are not signed in
