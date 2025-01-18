@@ -15,10 +15,16 @@
     <h1>Your Skatespots</h1>
     <a href="/users/<%=user._id%>/spots/new">Add an Skate Spot</a>
     <ul>
-      <% spots.forEach((spots)=>{ %>
-      <li><%= spots.name %> at <%= spots.location %></li>
-      <% }) %>
-    </ul>
+      <% spots.forEach((spot)=>{ %>
+        <li>
+          <!-- Add a link around each application, directing to the 'show' page -->
+          <a href="/users/<%= user._id %>/spots/<%= spot._id %>">
+            <%= spot.name %> at <%= spot.location %>
+          </a>
+        </li>
+        <% }) %>
+      </ul>
+        
   </body>
   
    
