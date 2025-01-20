@@ -1,0 +1,33 @@
+<!-- views/applications/show.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= spot.name %></title>
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1><%= spot.name %> at <%= spot.location %></h1>
+    <% if (spot.notes) { %>
+    <p>Notes: <%= spot.notes %></p>
+    <% } %> <% if (spot.difficulty) { %>
+    <p>Difficulty: <%= spot.difficulty %></p>
+    <% } %>
+    <% if (spot.easyToFind) { %>
+    <p>Easy to Find: Yes</p>
+    <% } %>
+    <% if (spot.rating) { %>
+    <p>Rating: <%= spot.rating %></p>
+    <% } %>
+    <a href="/users/<%= user._id %>/spots/<%= spot._id %>/edit">
+        Edit this Skate spot
+    <form
+    action="/users/<%= user._id %>/spots/<%= spot._id %>?_method=DELETE"
+    method="POST"
+  >
+    <button type="submit">Delete this Skate spot</button>
+  </form>
+  </body>
+</html>
