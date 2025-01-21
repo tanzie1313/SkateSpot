@@ -1,41 +1,62 @@
-<!-- views/applications/show.ejs -->
-<!-- views/applications/show.ejs -->
-
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-    <title><%= spot.name %></title>
-  </head>
-  <body>
+    <link rel="stylesheet" href="/stylesheets/show.css" />
+
+    <title>
+        <%= spot.name %>
+    </title>
+</head>
+
+<body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1><%= spot.name %> at <%= spot.location %></h1>
-    <% if (spot.notes) { %>
-    <p>Notes: <%= spot.notes %></p>
-    <% } %> 
-    
-   
-    <% if (spot.easyToFind) { %>
-    <p>Easy to Find: Yes</p>
-    <% } else { %>
-    <p>Easy to Find: No</p>
-    <% } %>
-    
-    <% if (spot.difficulty === "easy") { %>
-    <p>Skatability: Easy</p>
-    <% } else if (spot.diffiulty === "medium") { %>
-    <p>Difficulty: Medium</p>
-    <% } else { %>
-    <p>Difficulty: Hard</p>
-    <% } %>
-    
-    <a href="/users/<%= user._id %>/spots/<%= spot._id %>/edit">Edit this Skate spot</a>
-    <form
-    action="/users/<%= user._id %>/spots/<%= spot._id %>?_method=DELETE"
-    method="POST"
-  >
-    <button type="submit">Delete this Skate spot</button>
-  </form>
-  </body>
+        <div class="show-body">
+            <div class="show-header">
+                <h1>
+                    <%= spot.name %> at <%= spot.location %>
+                </h1>
+                <div class="show-sidebar">
+                    <div class="show-actions">
+                        <a href="/users/<%= user._id %>/applications/<%= spot._id %>/edit">
+                            Edit Skate Spot
+                        </a>
+                        <form action="/users/<%= user._id %>/spots/<%= spot._id %>?_method=DELETE" method="POST">
+                            <button type="submit">Delete this Skate spot</button>
+                        </form>
+                    </div>
+                    <% if (spot.difficulty==="easy" ) { %>
+                        <p>Skatability: Easy</p>
+                        <% } else if (spot.diffiulty==="medium" ) { %>
+                            <p>Difficulty: Medium</p>
+                            <% } else { %>
+                                <p>Difficulty: Hard</p>
+                                <% } %>
+                </div>
+            </div>
+            <div class="show-notes-container">
+                <% if (spot.easyToFind) { %>
+                    <p>Easy to Find: Yes</p>
+                    <% } else { %>
+                        <p>Easy to Find: No</p>
+                        <% } %>
+                            <div class="show-notes">
+                                <% if (spot.notes) { %>
+                                    <p>Notes: <%= spot.notes %>
+                                    </p>
+                                    <% } %>
+
+
+
+                            </div>
+            </div>
+</body>
+
+
+
+
+
+</body>
+
 </html>

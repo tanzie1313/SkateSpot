@@ -8,6 +8,7 @@
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
+    <div class = "edit-body">
     <h1>Edit <%= spot.name %> at <%= spot.location %></h1>
     <form action="/users/<%= user._id %>/spots/<%= spot._id %>?_method=PUT" method="POST">
     <input type="text" id="name" name="name" value="<%= spot.name %>" />
@@ -25,6 +26,7 @@
     </select>
     <button type="submit">Update SkateSpot</button>
     </form>
+    </div>
 
 
   </body>

@@ -108,16 +108,17 @@ h1 {
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  width: 20em;
-  height: 50%;
-  background-color: #87f351;
-  padding: 30px 40px 20px 40px;
-  border-radius: 20px;
-  color: #060607;
-  font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 20em;
+    height: 50%;
+    background-color: #87f351;
+    padding: 30px 40px 20px 40px;
+    border-radius: 20px;
+    color: #060607;
+    font-weight: bold;
+    margin-top: -20px; /* Adjust this value to move the form up */
 }
 
 input {
