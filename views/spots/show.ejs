@@ -19,7 +19,7 @@
                 </h1>
                 <div class="show-sidebar">
                     <div class="show-actions">
-                        <a href="/users/<%= user._id %>/applications/<%= spot._id %>/edit">
+                        <a href="/users/<%= user._id %>/spots/<%= spot._id %>/edit">
                             Edit Skate Spot
                         </a>
                         <form action="/users/<%= user._id %>/spots/<%= spot._id %>?_method=DELETE" method="POST">
@@ -27,8 +27,8 @@
                         </form>
                     </div>
                     <% if (spot.difficulty==="easy" ) { %>
-                        <p>Skatability: Easy</p>
-                        <% } else if (spot.diffiulty==="medium" ) { %>
+                        <p>Difficulty: Easy</p>
+                        <% } else if (spot.difficulty==="medium" ) { %>
                             <p>Difficulty: Medium</p>
                             <% } else { %>
                                 <p>Difficulty: Hard</p>

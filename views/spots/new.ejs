@@ -2,34 +2,42 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-    <title>Add a New Skate Spot</title>
-  </head>
-  <body>
-    <%- include('../partials/_navbar.ejs') %>
-    <div class="new-body"></div>
-    <h1>Add your New SkateSpot</h1>
-    <div class="new-body"></div>
-    <form action="/users/<%= user._id %>/spots" method="POST">
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" />
-    <label for="location">Location</label>
-    <input type="text" id="location" name="location" />
-    <label for ="easyToFing">Easy to Find</label>
-    <input type="checkbox" value="true" id="easyToFind" name="easyToFind" />
-    <label for="difficulty">Difficulty</label>
-    <select id="difficulty" name="difficulty">
-      <option value="easy"> Easy </option>
-      <option value="medium"> Medium </option>
-      <option value="hard"> Hard </option>
-    <label for="notes">Notes</label>
-    <textarea id="notes" name="notes"></textarea>
-    <button type="submit">Add SkateSpot</button>
-    </form>
-  </div>
 
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
+  <title>Add a New Skate Spot</title>
+</head>
+
+<body>
+  <%- include('../partials/_navbar.ejs') %>
+
+    <h1>Add your New SkateSpot</h1>
+    <div class="new-body">
+
+      <form action="/users/<%= user._id %>/spots" method="POST">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" />
+        <label for="location">Location</label>
+        <input type="text" id="location" name="location" />
+        <label for="easyToFing">Easy to Find</label>
+        <input type="checkbox" value="true" id="easyToFind" name="easyToFind" />
+        <label for="difficulty">Difficulty</label>
+        <select id="difficulty" name="difficulty">
+          <option value="easy"> Easy </option>
+          <option value="medium"> Medium </option>
+          <option value="hard"> Hard </option>
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes"></textarea>
+          <button type="submit">Add SkateSpot</button>
+      </form>
+</body>
+
+</html>
+</div>
+
+
+</body>
+
 </html>

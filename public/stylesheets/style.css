@@ -1,9 +1,6 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
-/* public/stylesheets/style.css */
-/* //intial styling for the body */
+
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -18,7 +15,7 @@ body {
 .index-body {
     background-image: url('https://imgur.com/pEfYPlM.jpg');
     background-repeat: no-repeat;
-    background-size: cover; /* Makes the image cover the entire page */
+    background-size: cover;
     display: flex;
     min-height: 100vh;
     width: 100vw;
@@ -29,20 +26,20 @@ body {
     color: white;
     font-size: 4.4em;
     position: absolute;
-    top: 50px; /* Adjust this value to move the header down */
+    top: 50px;
     right: 0;
     margin: 20px;
-    text-align: right; /* Aligns the text to the right */
+    text-align: right;
 }
 
-  
+
 .subheader {
     margin: 0 20px 0 20px;
     font-size: 1.4em;
     position: absolute;
-    top: 40px; /* Adjust this value to move the subheader down */
+    top: 40px;
     right: 0;
-    text-align: right; /* Aligns the text to the right */
+    text-align: right;
 }
 
 .index-container {
@@ -53,7 +50,6 @@ body {
     height: 100%;
 }
 
-/* Existing styles for other elements */
 .auth-links {
     display: flex;
     flex-direction: column;
@@ -92,19 +88,21 @@ body {
 .signin-link:hover {
     background-color: #ffffff;
 }
-/* public/stylesheets/style.css */
+
+
 .signin-container,
 .signup-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 h1 {
-  color: #F1a96f;
+    color: #F1a96f;
+
 }
 
 form {
@@ -118,46 +116,44 @@ form {
     border-radius: 20px;
     color: #060607;
     font-weight: bold;
-    margin-top: -20px; /* Adjust this value to move the form up */
+
 }
 
 input {
-  border: 1px solid rgb(235, 237, 239);
-  padding: 8px;
-  border-radius: 10px;
+    border: 1px solid rgb(235, 237, 239);
+    padding: 8px;
+    border-radius: 10px;
 }
 
 button {
-  padding: 10px;
-  background-color: #7a2895;
-  color: white;
-  border-radius: 30px;
-  border: none;
-  margin: 15px 0;
-  font-size: 1.1em;
+    padding: 10px;
+    background-color: #7a2895;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    margin: 15px 0;
+    font-size: 1.1em;
 }
 
-/* public/stylesheets/style.css */
 
-/* public/stylesheets/style.css */
 
 .all-spots-body {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  
-  .all-spots-header {
+}
+
+.all-spots-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     width: 90%;
-  }
-  
-  .add-spot-link {
+}
+
+.add-spot-link {
     padding: 10px;
     background-color: #ce48a8;
     color: white;
@@ -166,12 +162,12 @@ button {
     font-size: 1.1em;
     padding: 2px 25px;
     text-decoration: none;
-  }
-  
-  .add-spot-link:hover {
+}
+
+.add-spot-link:hover {
     background-color: #F1a96f;
-  }
-  /* public/stylesheets/style.css */
+}
+
 
 ul {
     list-style: none;
@@ -180,9 +176,9 @@ ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  
-  ul > a {
+}
+
+ul>a {
     text-decoration: none;
     color: #131314;
     width: 50%;
@@ -192,42 +188,42 @@ ul {
     margin: 15px 0;
     font-weight: bold;
     text-align: center;
-  }
-  
-  ul > a:hover {
+}
+
+ul>a:hover {
     background-color: #87f351;
     color: white;
-  }
-  /* public/stylesheets/style.css */
+}
+
 
 .new-body {
     display: flex;
+
     justify-content: center;
     align-items: center;
     height: 100%;
-  }
-  
-  .new-body > form,
-  .edit-body > form {
+}
+
+.new-body>form,
+.edit-body>form {
     height: 70%;
-  }
-  
-  textarea,
-  select {
+}
+
+textarea,
+select {
     border: 1px solid rgb(182, 182, 182);
     border-radius: 10px;
     padding: 10px;
-  }
-  
-  select {
+}
+
+select {
     margin-bottom: 10px;
-  }
-  
-  .edit-body {
+}
+
+.edit-body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
-  }
-  
+}
