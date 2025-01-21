@@ -107,16 +107,16 @@ router.get('/:spotId/edit', async (req, res) => {
 
 
 
-
 router.get('/:spotId', async (req, res) => {
   try {
     // Look up the user from req.session
     const currentUser = await User.findById(req.session.user._id);
-    // Find the spots by the spotId supplied from req.params
+    // Find the application by the spotId supplied from req.params
     const spot = currentUser.spots.id(req.params.spotId);
     // Render the show view, passing the spot data in the context object
     res.render('spots/show.ejs', {
-      spot: spot,
+      
+      spot: spot
     });
   } catch (error) {
     // If any errors, log them and redirect back home

@@ -15,22 +15,14 @@
     <input type="text" id="location" name="location" value="<%= spot.location %>" />
     <label for ="easyToFing">Easy to Find</label>
     <input type="checkbox" id="easyToFind" name="easyToFind" <%= spot.easyToFind ? 'checked' : '' %> />
-    <label for ="difficulty">Difficulty</label>
-    <select id="difficulty" name="difficulty">
-      <option value="easy" <%= spot.difficulties === "easy" ? "selected" : "" %>>Easy</option>
-      <option value="medium" <%= spot.difficulties === "medium" ? "selected" : "" %>>Medium</option>
-      <option value="hard" <%= spot.difficulties === "hard" ? "selected" : "" %>>Hard</option>
-    </select>
-    <label for ="rating">Rating</label>
-    <select id="rating" name="rating">
-      <option value="1" <%= spot.ratings === 1 ? "selected" : "" %>>1</option>
-      <option value="2" <%= spot.ratings === 2 ? "selected" : "" %>>2</option>
-      <option value="3" <%= spot.ratings === 3 ? "selected" : "" %>>3</option>
-      <option value="4" <%= spot.ratings === 4 ? "selected" : "" %>>4</option>
-      <option value="5" <%= spot.ratings === 5 ? "selected" : "" %>>5</option>
-    </select>
     <label for="notes">Notes:</label>
     <textarea id="notes" name="notes"><%= spot.notes %></textarea>
+    <label for="difficulty">Difficulty</label>
+    <select id="difficulty" name="difficulty">
+      <option value="easy" <%= spot.diffiulty === "Easy" ? "selected" : "" %>> Easy </option>
+      <option value="medium" <%= spot.difficulty=== "Medium" ? "selected" : "" %>> Medium </option>
+      <option value="hard" <%= spot.difficulty== "Hard" ? "selected" : "" %>> Hard </option>
+    </select>
     <button type="submit">Update SkateSpot</button>
     </form>
 

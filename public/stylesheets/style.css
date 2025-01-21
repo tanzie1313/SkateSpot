@@ -11,7 +11,7 @@ body {
     flex-direction: column;
     height: 100vh;
     width: 100vw;
-    background-color: #5bceee;
+    background-color: #7dbcdc;
 }
 
 
@@ -116,12 +116,12 @@ form {
   background-color: #87f351;
   padding: 30px 40px 20px 40px;
   border-radius: 20px;
-  color: #4b598e;
+  color: #060607;
   font-weight: bold;
 }
 
 input {
-  border: 1px solid rgb(182, 182, 182);
+  border: 1px solid rgb(235, 237, 239);
   padding: 8px;
   border-radius: 10px;
 }
