@@ -13,15 +13,15 @@
     <h1><%= spot.name %> at <%= spot.location %></h1>
     <% if (spot.notes) { %>
     <p>Notes: <%= spot.notes %></p>
-    <% } %> <% if (spot.difficulty) { %>
+    <% } %> 
     <p>Difficulty: <%= spot.difficulty %></p>
-    <% } %>
+   
     <% if (spot.easyToFind) { %>
     <p>Easy to Find: Yes</p>
+    <% } else { %>
+    <p>Easy to Find: No</p>
     <% } %>
-    <% if (spot.rating) { %>
-    <p>Rating: <%= spot.rating %></p>
-    <% } %>
+    <p>Ratings: <%= spot.ratings %></p>
     <a href="/users/<%= user._id %>/spots/<%= spot._id %>/edit">
         Edit this Skate spot
     <form

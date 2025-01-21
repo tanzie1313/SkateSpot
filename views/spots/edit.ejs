@@ -17,17 +17,17 @@
     <input type="checkbox" id="easyToFind" name="easyToFind" <%= spot.easyToFind ? 'checked' : '' %> />
     <label for ="difficulty">Difficulty</label>
     <select id="difficulty" name="difficulty">
-      <option value="easy" <%= spot.difficulty === "easy" ? "selected" : "" %>>Easy</option>
-      <option value="medium" <%= spot.difficulty === "medium" ? "selected" : "" %>>Medium</option>
-      <option value="hard" <%= spot.difficulty === "hard" ? "selected" : "" %>>Hard</option>
+      <option value="easy" <%= spot.difficulties === "easy" ? "selected" : "" %>>Easy</option>
+      <option value="medium" <%= spot.difficulties === "medium" ? "selected" : "" %>>Medium</option>
+      <option value="hard" <%= spot.difficulties === "hard" ? "selected" : "" %>>Hard</option>
     </select>
     <label for ="rating">Rating</label>
     <select id="rating" name="rating">
-      <option value="1" <%= spot.rating === "1" ? "selected" : "" %>>1</option>
-      <option value="2" <%= spot.rating === "2" ? "selected" : "" %>>2</option>
-      <option value="3" <%= spot.rating === "3" ? "selected" : "" %>>3</option>
-      <option value="4" <%= spot.rating === "4" ? "selected" : "" %>>4</option>
-      <option value="5" <%= spot.rating === "5" ? "selected" : "" %>>5</option>
+      <option value="1" <%= spot.ratings === 1 ? "selected" : "" %>>1</option>
+      <option value="2" <%= spot.ratings === 2 ? "selected" : "" %>>2</option>
+      <option value="3" <%= spot.ratings === 3 ? "selected" : "" %>>3</option>
+      <option value="4" <%= spot.ratings === 4 ? "selected" : "" %>>4</option>
+      <option value="5" <%= spot.ratings === 5 ? "selected" : "" %>>5</option>
     </select>
     <label for="notes">Notes:</label>
     <textarea id="notes" name="notes"><%= spot.notes %></textarea>
