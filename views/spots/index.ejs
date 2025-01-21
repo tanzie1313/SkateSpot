@@ -13,19 +13,21 @@
 
 <body>
     <%- include('../partials/_navbar.ejs') %>
-    <h1>Your Skatespots</h1>
-    <a href="/users/<%=user._id%>/spots/new">Add an Skate Spot</a>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
-    <ul>
-      <% spots.forEach((spot)=>{ %>
-        <li>
-          <!-- Add a link around each application, directing to the 'show' page -->
-          <a href="/users/<%= user._id %>/spots/<%= spot._id %>">
-            <%= spot.name %> at <%= spot.location %>
-          </a>
-        </li>
+    <div class="all-apps-body">
+      <div class="all-apps-header">
+        <h1>Your Skate Spots</h1>
+        <a class="add-spot-link" href="/users/<%=user._id%>/spots/new"
+          >Add an another Skate Spot</a
+        >
+      </div>
+      <ul>
+        <% spots.forEach((spot)=>{ %>
+        <a href="/users/<%= user._id %>/spots/<%= spot._id %>">
+          <li><%= spot.name  %> at <%= spot.location %></li>
+        </a>
         <% }) %>
       </ul>
+    </div>
         
   </body>
   
