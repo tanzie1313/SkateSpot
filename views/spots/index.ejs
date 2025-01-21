@@ -5,6 +5,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <title>Your Skatespots</title>
   </head>
   <body>
@@ -14,6 +15,7 @@
     <%- include('../partials/_navbar.ejs') %>
     <h1>Your Skatespots</h1>
     <a href="/users/<%=user._id%>/spots/new">Add an Skate Spot</a>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
     <ul>
       <% spots.forEach((spot)=>{ %>
         <li>

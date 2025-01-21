@@ -15,12 +15,12 @@ easyToFind: {
     type: Boolean,
     
 },
-difficulty: {   
+difficulties: {   
     type: String,
     enum: ['easy', 'medium', 'hard'],
    
 },
-rating: {
+ratings: {
     type: String,
     enum: ['1', '2', '3', '4', '5'],
 },
