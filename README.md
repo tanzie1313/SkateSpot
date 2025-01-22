@@ -14,7 +14,7 @@ Express
 MongoDB
 Chat GPT
 youTube
-Bootstaps
+
 
 ## Attributions
 contrast accesability checker
