@@ -9,11 +9,10 @@ const session = require('express-session');
 
 const authController = require('./controllers/auth.js');
 const spotsController = require('./controllers/spots.js');
-// server.js
 
 
 
-// require our new middleware!
+
 const isSignedIn = require('./middleware/is-signed-in.js');
 const passUserToView = require('./middleware/pass-user-to-view.js');
 
@@ -39,22 +38,17 @@ app.use(
   })
 );
 app.use(passUserToView);
-// app.get('/', (req, res) => {
-//   res.render('index.ejs', {
-//     user: req.session.user,
-//   });
-// });
 
 app.get('/', (req, res) => {
-    // Check if the user is signed in
-    if (req.session.user) {
-        // Redirect signed-in users to their spots index
-        res.redirect(`/users/${req.session.user._id}/spots`);
-    } else {
-        // Show the homepage for users who are not signed in
-        res.render('index.ejs');
-    }
-    });
+
+  if (req.session.user) {
+
+    res.redirect(`/users/${req.session.user._id}/spots`);
+  } else {
+
+    res.render('index.ejs');
+  }
+});
 
 
 
